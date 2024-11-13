@@ -1,59 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Dropdown Menu Using HTML and CSS</title>
-    <style>
-         
-        li, ul {
-            padding: 0;
-            margin: 0;
-            font-family: monospace;
-        }
+<html>
+<body>
 
-         
-        ul {
-            list-style: none;
-            background: #22438c;
-        }
+<h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
 
-        ul > li {
-            display: inline-block;
-            position: relative;
-        }
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
 
-        ul > li > a {
-            display: block;
-            padding: 20px 25px;
-            color: #FFF;
-            text-decoration: none;
-            text-align: center;
-            font-size: 20px;
-        }         
-      
- 
-        ul > li > a:hover {
-            background-color: #1a356f;
-        }
-    </style>
-</head>
-<body >
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="language.html">Languages</a>   
-        </li>
-        <li><a href="Aboutme.html">About me</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="Contactme.html">Contact me</a></li>
-    </ul>
-    <img src="simon101.png">
-    <h3 style="font-style: italic">
-        Hi there, I’m Simon, a student with a passion for 
-        backend development. I’m constantly learning, building, 
-        and refining my skills in coding and problem-solving. This 
-        portfolio showcases the projects I’ve worked on so far. Take 
-        a look around and see what Ive been doing!"
-    </h3>
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" target="_blank" onclick="mycomputer()">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" target="_blank" onclick="myphone()">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm" target="_blank" onclick="mycoffee()">
+</map>
+
+<script>
+function mycomputer() {
+  alert("You have clicked on the computer");
+}
+function myphone() {
+  alert("You have clicked on the phone");
+}
+function mycoffee(){
+  alert("You have clicked on the phone");
+}
+
+</script>
+
 </body>
 </html>
